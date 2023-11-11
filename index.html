@@ -8,11 +8,12 @@
 
         <link rel="stylesheet" href="css/overlayscrollbars.min.css" />
         <link href="css/style.css" rel="stylesheet" />
+        
+        <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
         <script
             defer
             src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
         ></script>
-
         <script src="js/script.js" type="module"></script>
 
         <title>MoneySafe</title>
@@ -161,15 +162,39 @@
                         <table class="report__table">
                             <thead>
                                 <tr>
-                                    <th class="report__header-cell">
+                                    <th
+                                        class="report__header-cell"
+                                        data-sort="category"
+                                        data-dir="up"
+                                    >
                                         Категория
                                     </th>
-                                    <th class="report__header-cell">Сумма</th>
-                                    <th class="report__header-cell">
+                                    <th
+                                        class="report__header-cell"
+                                        data-sort="amount"
+                                        data-dir="up"
+                                    >
+                                        Сумма
+                                    </th>
+                                    <th
+                                        class="report__header-cell"
+                                        data-sort="description"
+                                        data-dir="up"
+                                    >
                                         Описание
                                     </th>
-                                    <th class="report__header-cell">Дата</th>
-                                    <th class="report__header-cell">
+                                    <th
+                                        class="report__header-cell"
+                                        data-sort="date"
+                                        data-dir="up"
+                                    >
+                                        Дата
+                                    </th>
+                                    <th
+                                        class="report__header-cell"
+                                        data-sort="type"
+                                        data-dir="up"
+                                    >
                                         Действие
                                     </th>
                                     <th class="report__header-cell"></th>
@@ -187,9 +212,7 @@
                             Сформировать график
                         </button>
 
-                        <div class="report__chart">
-                            <canvas id="myChart"></canvas>
-                        </div>
+                        <div class="report__chart"></div>
 
                         <button class="report__close">&#10006;</button>
                     </div>
